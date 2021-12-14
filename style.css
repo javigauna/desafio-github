@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        189deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(134, 114, 198, 1) 65%,
+        rgba(180, 55, 74, 1) 98%
+    );
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    gap: 40px;
+}
+.div {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background: blue;
+    color: white;
+    font-size: 2rem;
+}
+.div1 {
+    animation: rotar 2s linear infinite;
+    border-radius: 50%;
+    border: 10px dashed white;
+    background-color: rgb(151, 79, 163);
+}
+@keyframes rotar {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+.div2 {
+    animation: deformar 4s 1s infinite;
+    border: 5px dotted red;
+    background-color: rgb(75, 16, 129);
+}
+@keyframes deformar {
+    50% {
+        transform: skew(23deg);
+    }
+    100% {
+        border: 10px dotted red;
+        transform: skew(-23deg, 23deg);
+        background-color: rgb(226, 104, 47);
+        color: black;
+    }
+}
+.div3 {
+    position: absolute;
+    animation: mover 5s ease infinite;
+    border: 10px ridge white;
+    background-color: rgb(158, 238, 198);
+    color: rgb(43, 88, 12);
+}
+@keyframes mover {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: calc(100% - 150px);
+        left: 0;
+    }
+    50% {
+        top: calc(100% - 150px);
+        left: calc(100% - 150px);
+    }
+    75% {
+        top: 0;
+        left: calc(100% - 150px);
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+.div4 {
+    animation: agrandar 3s 1s ease infinite;
+    border: 15px groove rgb(121, 213, 230);
+    border-radius: 25%;
+}
+@keyframes agrandar {
+    33.3% {
+        transform: scale(1.2);
+    }
+    33.3% {
+        transform: scale(0.9);
+    }
+    33.3% {
+        transform: scale(1.2);
+    }
+}
+.div5 {
+    animation: fondo 5s infinite;
+    background: linear-gradient(
+    90deg,
+        rgba(255, 231, 171, 1) 0%,
+        rgba(174, 255, 254, 1) 33%,
+        rgba(234, 197, 255, 1) 67%,
+        rgba(255, 231, 171, 1) 100%
+    );
+    background-size: 200%;
+    color: black;
+    border-radius: 10px;
+}
+@keyframes fondo {
+    100% {
+    background-position: 200%;
+    }
+}
